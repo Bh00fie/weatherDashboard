@@ -33,7 +33,7 @@ When you open your code in the browser my resulting quiz should look similar to 
 
 - Result:
 
-![Dashboard](assets/images/dashboard.jpg)
+![Dashboard](images/dashboard.png)
 
 
 ---
