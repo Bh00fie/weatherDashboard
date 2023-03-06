@@ -106,7 +106,6 @@ let weatherSearch = (cityName) => {
 });
 };
 
-
 // Function to search for a city
 let citySearch = () => {
     let cityName = searchInput.val().trim();
@@ -120,3 +119,12 @@ let citySearch = () => {
     appendSearch();
     searchInput.val(''); // Clear the input field
 };
+
+// Add click event listener to clear history button
+$('#clear-history').on('click', function() {
+    // Remove cityName array from local storage
+    localStorage.removeItem('cityName');
+  
+    // Remove search history buttons from DOM
+    $('#history').empty();
+  });
