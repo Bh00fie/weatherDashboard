@@ -60,4 +60,13 @@ let weatherSearch = (cityName) => {
       
     todayHead.append(todayHeader);
     todayWeather.addClass("border").html(currentWeatherSection);
-})}
+});
+
+    // Get next 5 days forecast by OpenWeatherAPI
+    let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
+    $.ajax({
+        url: forecastUrl,
+        method: "GET",
+    }).then(function(responseForecast){
+        console.log(responseForecast);
+})};
