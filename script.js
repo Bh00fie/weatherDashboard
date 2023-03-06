@@ -96,7 +96,12 @@ let weatherSearch = (cityName) => {
     const forecastIcon = $('<img>').attr({
         "src": `http://openweathermap.org/img/wn/${iconCode}.png`,
         "style": "height: 60px; width: 60px"
-    });   
+    }); 
+    
+    // Appending all information to each card
+    forecastHead.append(forecastHeader);
+    forecastList.append(forecastCard);
+    forecastCard.append(forecastDate, forecastIcon, forecastTemp, forecastHumidity, forecastWind);
     }
 })
 
