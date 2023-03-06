@@ -1,0 +1,84 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Header Styling */
+header {
+    text-align: center;
+    text-justify: center;
+    color: #F1F6F5;
+    background-image: linear-gradient(to right, #4B56D2 , #472183); 
+    padding: 10px;
+}
+header h1 {
+font-size: 8vh;
+margin: 0;
+}
+
+/* Form Styling */
+/* Form Header */
+#form-heading {
+font-weight: bolder;
+}
+
+/* Style the search form */
+input {
+width: 60%;
+padding: 8px;
+margin-top: 5px;
+margin-bottom: 5px;
+font-size: medium;
+color: rgb(91, 91, 91);
+}
+
+.input-group{
+display: flex;
+justify-content: center;
+}
+
+/* Styling for search button and remove button */
+#search-input, #search-button, #clear-history {
+width: 100%;
+} 
+
+/* Styling the  buttons */
+.search-button, #search-button, #clear-history {
+background-color: #8c96ff !important;
+border-radius: 4px;
+margin-top: 2vh;
+font-weight: bold !important;
+}
+
+
+/* Make the forecast display to the right of the searched cities */
+.row {
+display: flex;
+justify-content: space-between;
+}
+
+/* Styling for today container */
+#today {
+width: 70vw;
+border-width: thin;
+border-radius: 7px;
+padding-left: 10px;
+margin-top: 20px;
+}
+
+/* Styling for next 5 days header */
+#forecast-heading{
+    margin-top: 20px;
+}
+
+/* Styling for next 5 days cards */
+.card-styling {
+background-color: #4b56d26c!important;
+height: max-content;
+padding-bottom: 1vh;
+}
+
+.card-text {
+font-size: 2vh;
+}
