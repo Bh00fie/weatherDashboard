@@ -89,6 +89,14 @@ let weatherSearch = (cityName) => {
         "Drizzle": "10d",
         "Snow": "13d"
         };
+
+    // Icon Styling
+    const forecastWeather = responseForecast.list[i].weather[0].main;
+    const iconCode = weatherIconMap[forecastWeather];
+    const forecastIcon = $('<img>').attr({
+        "src": `http://openweathermap.org/img/wn/${iconCode}.png`,
+        "style": "height: 60px; width: 60px"
+    });   
     }
 })
 
