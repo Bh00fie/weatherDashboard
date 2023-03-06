@@ -149,3 +149,10 @@ searchBtn.on('click', function(event){
     forecastList.empty();
     citySearch();
   });
+
+// Event listener for recall search history
+historyList.on('click', ".btn", function(event){
+    event.preventDefault();
+    forecastList.empty();
+    weatherSearch($(this).text());
+  });
