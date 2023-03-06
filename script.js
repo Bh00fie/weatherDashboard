@@ -47,4 +47,17 @@ let weatherSearch = (cityName) => {
       "src": `http://openweathermap.org/img/wn/${iconCode}.png`,
       "style": "height: 60px; width: 60px"
     });
+
+    // Appending all information to main card
+    const currentWeatherSection = $('<section>').append(
+        currentCity,
+        currentIcon,
+        currentDate,
+        currentTemp,
+        currentHumidity,
+        currentWindSpeed
+      );
+      
+    todayHead.append(todayHeader);
+    todayWeather.addClass("border").html(currentWeatherSection);
 })}
