@@ -69,4 +69,15 @@ let weatherSearch = (cityName) => {
         method: "GET",
     }).then(function(responseForecast){
         console.log(responseForecast);
+
+    // Create cards for forecast
+    let forecastCard;
+    let forecastHeader = $("<h2 class='mt-1 h3 form-label font-effect-outline'>").text("5 days forecast")
+    
+    for (let i = 2; i < responseForecast.list.length; i += 8) {
+    forecastCard = $("<section class='card card-styling mb-3 mx-auto col-2'>")
+    let forecastDate = $("<p class='card-text' style='font-weight: 600; text-align: center'>").text(responseForecast.list[i].dt_txt.substr(0,10));
+    const forecastTemp = $("<p class='card-text'>").text("Temp: " + Math.round(responseForecast.list[i].main.temp-273.15)+ " °C");
+    const forecastHumidity = $("<p class='card-text'>").text("Humidity: " + responseForecast.list[i].main.humidity + " %");
+    const forecastWind = $("<p class='card-text'>").text("Wind: " +responseForecast.list[i].wind.speed + " m/s");
 })};
