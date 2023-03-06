@@ -31,4 +31,12 @@ let weatherSearch = (cityName) => {
     const currentHumidity = $(`<p class='ml-2'>Current Humidity: ${response.main.humidity} %</p>`);
     const currentWindSpeed = $(`<p class='ml-2'>Current Wind Speed: ${response.wind.speed} meter/sec</p>`);
 
+    // Update Icon according to the weather
+    const weatherIconMap = {
+        "Rain": "09d",
+        "Clouds": "04d",
+        "Clear": "01d",
+        "Drizzle": "10d",
+        "Snow": "13d"
+    };
 })}
