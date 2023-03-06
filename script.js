@@ -11,3 +11,15 @@ const cityArray = [];
 
 // Defined API key
 const apiKey = '5db739fbbf70439b82102c73fb943ced';
+
+// Get City Weather using OpenWeatherAPI
+let weatherSearch = (cityName) => {
+    console.log(cityName);
+    let weathertUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+    $.ajax({
+        url: weathertUrl,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+
+})}
