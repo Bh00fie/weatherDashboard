@@ -103,6 +103,20 @@ let weatherSearch = (cityName) => {
     forecastList.append(forecastCard);
     forecastCard.append(forecastDate, forecastIcon, forecastTemp, forecastHumidity, forecastWind);
     }
-})
+});
+};
 
+
+// Function to search for a city
+let citySearch = () => {
+    let cityName = searchInput.val().trim();
+    cityArray.push(cityName);
+    if (cityName === '') {
+        return;
+      }
+    // Store search history to search list
+    localStorage.setItem('cityName', JSON.stringify(cityArray));
+    weatherSearch(cityName);
+    appendSearch();
+    searchInput.val(''); // Clear the input field
 };
