@@ -142,3 +142,10 @@ let appendSearch = () => {
     }
     historyList.prepend(searchBtn);
   };
+
+// Event listener for the search button click
+searchBtn.on('click', function(event){
+    event.preventDefault();
+    forecastList.empty();
+    citySearch();
+  });
