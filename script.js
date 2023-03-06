@@ -128,3 +128,17 @@ $('#clear-history').on('click', function() {
     // Remove search history buttons from DOM
     $('#history').empty();
   });
+
+// Function to append search history button
+let appendSearch = () => {
+    let searchHistory = JSON.parse(localStorage.getItem("cityName"));
+    let searchBtn;
+    if (searchHistory.length > 0) {
+      let lastIndex = searchHistory.length - 1;
+      let lastElement = searchHistory[lastIndex];
+      searchBtn = $("<button class='btn border text-muted mt-1 shadow-sm bg-white rounded' id='city-history' style='width: auto;'>").text(lastElement);
+    } else {
+      searchBtn = $("<button class='btn border text-muted mt-1 shadow-sm bg-white rounded' id='city-history' style='width: auto;'>").text(searchHistory);
+    }
+    historyList.prepend(searchBtn);
+  };
